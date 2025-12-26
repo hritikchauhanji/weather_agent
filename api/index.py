@@ -2,7 +2,6 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import os
 import requests
-import json
 from pydantic import BaseModel, Field
 from typing import Optional
 
