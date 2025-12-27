@@ -101,9 +101,11 @@ while True:
             tool_input = parsed_result.input
             print(f"🔧 Calling tool {tool_to_call} with input {tool_input}")
             tool_response = available_tools[tool_to_call](tool_input)
-            message_history.append({"role": "developer", "content": json.dumps(
-                {"step": "OBSERVE", "tool": tool_to_call, "input": tool_input, "output": tool_response}
-            )})
+            message_history.append({"role": "developer", "content": f"""
+                                    {{
+                "step": "OBSERVE", "tool": tool_to_call, "input": tool_input, "output": tool_response
+                }}
+            """})
             continue
             
         if parsed_result.step == "PLAN":
