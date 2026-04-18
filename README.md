@@ -8,8 +8,7 @@ An intelligent CLI-based AI agent that answers user queries using **LLM reasonin
 
 - 🤖 LLM-based reasoning (START → PLAN → TOOL → OBSERVE → OUTPUT)
 - 🛠️ Tool calling support (Weather API)
-- 🔄 Automatic fallback:
-  - OpenAI → Gemini (if quota/error)
+- 🔄 OpenAI → Gemini
 - 🌐 Real-time weather data using `wttr.in`
 - 🧠 Structured JSON output using Pydantic
 - 💬 Interactive CLI chatbot
